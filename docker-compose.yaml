@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.web
+        ports:
+            - 8080:80
+        volumes:
+            - ./default.conf:/etc/nginx/conf.d/default.conf
+            - ./web:/var/www/html
+        networks:
+            - app-network
+        depends_on:
+            - db
+
+    php-fpm:
+       build:
+            context: .
+            dockerfile: Dockerfile.php-fpm
+       volumes:
+            - ./web:/var/www/html
+       networks:
+           - app-network
+
+    db:
+        build:
+            context: .
+            dockerfile: Dockerfile.db
+        networks:
+            - app-network
+        environment:
+            MYSQL_ROOT_PASSWORD: "12345"
+networks:
+    app-network:
