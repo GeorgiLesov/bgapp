@@ -1,3 +1,31 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@GeorgiLesov
+shekeriev /
+bgapp
+Public
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+
+    Insights
+
+bgapp/web/index.php /
+@shekeriev
+shekeriev Database error details (Issue #1 / FR).
+Latest commit eb6e083 12 days ago
+History
+1 contributor
+56 lines (54 sloc) 1.75 KB
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -44,10 +72,29 @@
       }
    }
    catch (PDOException $e) {
-      print "<tr><td>Няма връзка към базата. Опитайте отново.</td></tr>\n";
+      print "<tr><td><div align='center'>\n";
+      print "Няма връзка към базата. Опитайте отново. <a href=\"#\" onclick=\"document.getElementById('error').style = 'display: block;';\">Детайли</a><br/>\n";
+      print "<span id='error' style='display: none;'><small><i>".$e->getMessage()." <a href=\"#\" onclick=\"document.getElementById('error').style = 'display: none;';\">Скрий</a></i></small></span>\n";
+      print "</div></td></tr>\n";
    }
 ?>
       </table>
     </div>
   </body>
 </html>
+
+    © 2022 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+Loading complete
