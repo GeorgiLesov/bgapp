@@ -1,31 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@GeorgiLesov
-shekeriev /
-bgapp
-Public
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-bgapp/web/index.php /
-@shekeriev
-shekeriev Database error details (Issue #1 / FR).
-Latest commit eb6e083 12 days ago
-History
-1 contributor
-56 lines (54 sloc) 1.75 KB
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -82,19 +54,3 @@ History
     </div>
   </body>
 </html>
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
